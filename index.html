@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
     <title>My Website</title>
@@ -15,6 +15,15 @@
             box-shadow: 0px 4px 8px rgba(0,0,0,0.1); /* हल्की परछाई */
             max-width: 300px;
         }
+        input[type="text"], input[type="email"], input[type="password"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
         input[type="submit"] {
             background-color: #007bff; /* नीला बटन */
             color: white; /* सफेद अक्षर */
@@ -22,6 +31,7 @@
             padding: 10px 15px;
             border-radius: 4px;
             cursor: pointer;
+            width: 100%;
         }
     </style>
 </head>
@@ -31,13 +41,19 @@
     <p>यह मेरी पहली वेबसाइट है!</p>
 
     <hr>
-    <h3>हमसे जुड़ें</h3>
+    <h3>लॉगिन / हमसे जुड़ें</h3>
     <form action="">
-        <label for="username">आपका नाम:</label><br>
-        <input type="text" id="username" name="username" placeholder="यहाँ अपना नाम लिखें"><br><br>
+        <label for="username">आपका नाम:</label>
+        <input type="text" id="username" name="username" placeholder="यहाँ अपना नाम लिखें" required>
 
-        <label for="message">आपका संदेश:</label><br>
-        <textarea id="message" name="message" placeholder="कुछ भी लिखें..."></textarea><br><br>
+        <label for="email">आपका ईमेल:</label>
+        <input type="email" id="email" name="email" placeholder="name@email.com" required>
+
+        <label for="password">पासवर्ड:</label>
+        <input type="password" id="password" name="password" placeholder="अपना पासवर्ड डालें" required>
+
+        <label for="message">आपका संदेश:</label>
+        <textarea id="message" name="message" placeholder="कुछ भी लिखें..."></textarea>
 
         <input type="submit" value="जमा करें">
     </form>
